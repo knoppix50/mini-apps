@@ -52,7 +52,7 @@ metadata:
     app: game
 spec:
   rules:
-  - host: game.bar
+  - host: agutierrc.game
     http:
       paths:
       - path: /
