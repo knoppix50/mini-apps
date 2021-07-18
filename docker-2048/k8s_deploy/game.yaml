@@ -62,6 +62,14 @@ spec:
           initialDelaySeconds: 5
           periodSeconds: 5
           successThreshold: 1
+        volumeMounts:
+        - name: site-pvc
+          mountPath: /var/lib/nginx/html
+      volumes:
+      - name: site-pvc
+        persistentVolumeClaim:
+          claimName: nfs-pvc    
+
 ---
 apiVersion: v1
 kind: Service
